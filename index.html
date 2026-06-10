@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hazem Zaki | Performance Marketing Expert</title>
+<title>Hazem Zaki | Media Buyer & Growth Marketer</title>
 
 <style>
 *{
@@ -12,7 +12,6 @@
   padding:0;
   box-sizing:border-box;
   font-family:Arial, sans-serif;
-  scroll-behavior:smooth;
 }
 
 body{
@@ -41,9 +40,19 @@ nav a:hover{color:#fff}
   padding:110px 20px 60px;
 }
 
-.hero h1{font-size:64px;}
-.hero span{color:#4f9cff;}
-.hero p{color:#b5b5b5;margin-top:10px;}
+.hero h1{
+  font-size:64px;
+}
+
+.hero span{
+  color:#4f9cff;
+}
+
+.hero p{
+  color:#b5b5b5;
+  margin-top:10px;
+  font-size:18px;
+}
 
 .badge{
   display:inline-block;
@@ -54,7 +63,9 @@ nav a:hover{color:#fff}
   font-size:12px;
 }
 
-.cta{margin-top:25px;}
+.cta{
+  margin-top:25px;
+}
 
 .btn{
   display:inline-block;
@@ -63,26 +74,56 @@ nav a:hover{color:#fff}
   border-radius:8px;
   text-decoration:none;
   font-weight:bold;
-  cursor:pointer;
 }
 
 .primary{background:#1f6fff;color:#fff}
 .green{background:#25D366;color:#fff}
 
-/* PRICING */
-section{max-width:1100px;margin:70px auto;padding:0 20px;}
+/* SECTIONS */
+section{
+  max-width:1100px;
+  margin:80px auto;
+  padding:0 20px;
+}
 
-h2{color:#4f9cff;margin-bottom:20px;}
+h2{
+  color:#4f9cff;
+  margin-bottom:20px;
+}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;}
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+}
 
 .card{
   background:rgba(255,255,255,0.04);
+  border:1px solid rgba(79,156,255,0.15);
   padding:22px;
   border-radius:14px;
+}
+
+/* ABOUT */
+.about{
+  background:rgba(255,255,255,0.03);
+  padding:25px;
+  border-left:4px solid #4f9cff;
+  border-radius:10px;
+  color:#b5b5b5;
+  line-height:1.8;
+}
+
+/* PORTFOLIO */
+.work{
+  background:rgba(255,255,255,0.04);
+  padding:20px;
+  border-radius:12px;
   border:1px solid rgba(79,156,255,0.15);
 }
 
+/* PRICING */
 .pricing{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -102,7 +143,11 @@ h2{color:#4f9cff;margin-bottom:20px;}
   margin:10px 0;
 }
 
-.price-card ul{color:#b5b5b5;line-height:1.8;list-style:none;}
+.price-card ul{
+  list-style:none;
+  color:#b5b5b5;
+  line-height:1.8;
+}
 
 .price-card button{
   margin-top:15px;
@@ -112,63 +157,15 @@ h2{color:#4f9cff;margin-bottom:20px;}
   border-radius:8px;
   background:#1f6fff;
   color:#fff;
-  cursor:pointer;
 }
 
-/* FLOAT */
-.float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:14px 16px;
-  border-radius:50px;
-  text-decoration:none;
-  color:#fff;
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  color:#777;
+  font-size:13px;
 }
-
-/* MODAL */
-.modal{
-  display:none;
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.8);
-  justify-content:center;
-  align-items:center;
-}
-
-.modal-content{
-  background:#0f172a;
-  padding:25px;
-  border-radius:12px;
-  width:320px;
-}
-
-.modal-content input{
-  width:100%;
-  padding:10px;
-  margin:8px 0;
-  border:none;
-  border-radius:6px;
-}
-
-.modal-content button{
-  width:100%;
-  padding:10px;
-  background:#1f6fff;
-  border:none;
-  color:#fff;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-.close{
-  float:right;
-  cursor:pointer;
-  color:#aaa;
-}
-
 </style>
 </head>
 
@@ -177,102 +174,100 @@ h2{color:#4f9cff;margin-bottom:20px;}
 <nav>
   <h2>HZ Agency</h2>
   <div>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
     <a href="#pricing">Pricing</a>
-    <a onclick="openModal()" style="cursor:pointer;">Book Call</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
   <h1>Hazem <span>Zaki</span></h1>
-  <p>Performance Marketing | Ads | Growth Systems</p>
-
-  <div class="badge">Conversion-Focused Growth Expert</div>
+  <p>Media Buyer | Digital Marketer | Growth Strategist</p>
+  <div class="badge">Performance Marketing Expert</div>
 
   <div class="cta">
-    <button class="btn primary" onclick="openModal()">Book a Call</button>
+    <a class="btn primary" href="mailto:hzaki6023@gmail.com">Start Project</a>
     <a class="btn green" href="https://wa.me/201099247115">WhatsApp</a>
   </div>
 </div>
 
-<!-- PRICING -->
-<section id="pricing">
-<h2>Pricing Plans</h2>
-
-<div class="pricing">
-
-<div class="price-card">
-<h3>Starter</h3>
-<div class="price">2000 EGP</div>
-<ul>
-<li>1 Ad Campaign</li>
-<li>Basic Optimization</li>
-<li>Weekly Report</li>
-</ul>
-<button onclick="openModal()">Choose Plan</button>
-</div>
-
-<div class="price-card">
-<h3>Growth</h3>
-<div class="price">5000 EGP</div>
-<ul>
-<li>Full Ads Management</li>
-<li>Content Support</li>
-<li>Optimization</li>
-</ul>
-<button onclick="openModal()">Choose Plan</button>
-</div>
-
-<div class="price-card">
-<h3>Pro</h3>
-<div class="price">10000 EGP</div>
-<ul>
-<li>Full Growth System</li>
-<li>Ads + Content + Strategy</li>
-<li>Priority Support</li>
-</ul>
-<button onclick="openModal()">Choose Plan</button>
-</div>
-
-</div>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    I help businesses grow using paid ads, content creation, and performance marketing systems.
+    My focus is building scalable growth strategies that generate real ROI.
+  </div>
 </section>
 
-<!-- FLOAT -->
-<a class="float" href="https://wa.me/201099247115">WhatsApp</a>
-
-<!-- MODAL -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">X</span>
-    <h3>Book a Call</h3>
-
-    <input id="name" placeholder="Your Name">
-    <input id="business" placeholder="Business Name">
-    <input id="phone" placeholder="Phone">
-
-    <button onclick="send()">Submit</button>
+<!-- SERVICES -->
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card">🚀 Meta Ads Management</div>
+    <div class="card">🎬 Reels & Content Creation</div>
+    <div class="card">📱 Social Media Management</div>
+    <div class="card">🎨 Creative & Design</div>
   </div>
-</div>
+</section>
 
-<script>
-function openModal(){
-  document.getElementById("modal").style.display="flex";
-}
+<!-- WORK -->
+<section id="work">
+  <h2>Portfolio</h2>
+  <div class="grid">
+    <div class="work">Ad Campaign Setup</div>
+    <div class="work">Reels Production</div>
+    <div class="work">Brand Growth Strategy</div>
+  </div>
+</section>
 
-function closeModal(){
-  document.getElementById("modal").style.display="none";
-}
+<!-- PRICING -->
+<section id="pricing">
+  <h2>Pricing Plans</h2>
 
-function send(){
-  let name=document.getElementById("name").value;
-  let business=document.getElementById("business").value;
-  let phone=document.getElementById("phone").value;
+  <div class="pricing">
 
-  let msg=`New Lead:%0AName: ${name}%0ABusiness: ${business}%0APhone: ${phone}`;
+    <div class="price-card">
+      <h3>Starter</h3>
+      <div class="price">2000 EGP</div>
+      <ul>
+        <li>1 Ad Campaign</li>
+        <li>Basic Optimization</li>
+        <li>Weekly Report</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
 
-  window.open("https://wa.me/201099247115?text="+msg,"_blank");
-}
-</script>
+    <div class="price-card">
+      <h3>Growth</h3>
+      <div class="price">5000 EGP</div>
+      <ul>
+        <li>Full Ads Management</li>
+        <li>Content Support</li>
+        <li>Optimization</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+
+    <div class="price-card">
+      <h3>Pro</h3>
+      <div class="price">10000 EGP</div>
+      <ul>
+        <li>Full Growth System</li>
+        <li>Ads + Content + Strategy</li>
+        <li>Priority Support</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+© 2026 Hazem Zaki | Portfolio
+</footer>
 
 </body>
 </html>
