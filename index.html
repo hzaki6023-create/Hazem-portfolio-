@@ -3,19 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Hazem Zaki | Media Buyer & Growth Marketer</title>
-
+<title>Hazem Zaki | Pixel Marketing Agency</title>
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
-  background: radial-gradient(circle at top, #0b1220, #05060a);
+  background: radial-gradient(circle at top, #0d1527, #05070f);
   color:#fff;
   scroll-behavior: smooth;
 }
@@ -28,45 +26,64 @@ nav{
   padding:18px 40px;
   position:sticky;
   top:0;
-  background:rgba(5, 6, 10, 0.8);
-  backdrop-filter:blur(10px);
+  background:rgba(5, 7, 15, 0.85);
+  backdrop-filter:blur(12px);
   z-index: 1000;
   border-bottom: 1px solid rgba(79,156,255,0.1);
 }
 
-nav h2{color:#4f9cff; font-size: 22px;}
+nav h2{color:#4f9cff; font-size: 22px; font-weight: 800;}
 nav a{color:#aaa;margin-left:15px;text-decoration:none;font-size:14px; transition: 0.3s;}
 nav a:hover{color:#4f9cff}
 
 /* HERO */
 .hero{
   text-align:center;
-  padding:140px 20px 80px;
+  padding:150px 20px 90px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1f6fff;
+  box-shadow: 0 0 25px rgba(31, 111, 255, 0.5);
+  margin-bottom: 25px;
 }
 
 .hero h1{
-  font-size:54px;
-  margin-bottom: 10px;
+  font-size:56px;
+  margin-bottom: 15px;
+  font-weight: 800;
 }
 
 .hero span{
   color:#4f9cff;
-  text-shadow: 0 0 20px rgba(79,156,255,0.4);
+  text-shadow: 0 0 20px rgba(79,156,255,0.3);
 }
 
 .hero p{
   color:#b5b5b5;
-  font-size:18px;
-  max-width: 600px;
-  margin: 15px auto;
+  font-size:19px;
+  max-width: 700px;
+  margin: 15px auto 25px;
+  line-height: 1.6;
+}
+
+.badge-container {
+  margin-top: 15px;
+  margin-bottom: 25px;
 }
 
 .badge{
   display:inline-block;
-  margin-top:10px;
-  padding:6px 14px;
-  background:rgba(31, 111, 255, 0.2);
-  border: 1px solid #1f6fff;
+  margin: 5px;
+  padding:8px 16px;
+  background:rgba(31, 111, 255, 0.08);
+  border: 1px solid rgba(79,156,255,0.3);
   color: #4f9cff;
   border-radius:20px;
   font-size:13px;
@@ -79,7 +96,7 @@ nav a:hover{color:#4f9cff}
 
 .btn{
   display:inline-block;
-  padding:14px 24px;
+  padding:14px 28px;
   margin:8px;
   border-radius:8px;
   text-decoration:none;
@@ -96,16 +113,22 @@ nav a:hover{color:#4f9cff}
 /* SECTIONS */
 section{
   max-width:1100px;
-  margin:100px auto;
+  margin:120px auto;
   padding:0 20px;
 }
 
 h2.sec-title {
   color:#4f9cff;
-  margin-bottom:30px;
-  font-size: 28px;
+  margin-bottom:15px;
+  font-size: 30px;
   border-left: 4px solid #1f6fff;
-  padding-left: 10px;
+  padding-left: 12px;
+}
+
+.sec-subtitle {
+  color: #888;
+  margin-bottom: 35px;
+  font-size: 15px;
 }
 
 /* GRID */
@@ -116,8 +139,8 @@ h2.sec-title {
 }
 
 .card{
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(79,156,255,0.1);
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(79,156,255,0.08);
   padding:25px;
   border-radius:14px;
   font-size: 16px;
@@ -126,46 +149,35 @@ h2.sec-title {
 }
 .card:hover{
   border-color: #4f9cff;
-  background: rgba(79,156,255,0.05);
+  background: rgba(79,156,255,0.04);
 }
 
-/* ABOUT */
-.about{
-  background:rgba(255,255,255,0.02);
-  padding:30px;
-  border:1px solid rgba(255,255,255,0.05);
-  border-radius:14px;
-  color:#b5b5b5;
-  line-height:1.8;
-  font-size: 16px;
-}
-
-/* PORTFOLIO IMAGES */
+/* PORTFOLIO IMAGES & VIDEOS */
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 25px;
-  margin-bottom: 50px;
 }
 
 .work-card {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.02);
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid rgba(79,156,255,0.1);
+  border: 1px solid rgba(79,156,255,0.08);
   transition: 0.3s;
 }
 
 .work-card:hover {
   transform: translateY(-5px);
   border-color: #4f9cff;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-.work-img {
+.work-img, .work-video {
   width: 100%;
-  height: 220px;
+  height: 250px;
   object-fit: cover;
-  background: #111;
+  background: #080c14;
   display: block;
 }
 
@@ -182,6 +194,7 @@ h2.sec-title {
 .work-info p {
   color: #b5b5b5;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 /* PRICING */
@@ -192,17 +205,17 @@ h2.sec-title {
 }
 
 .price-card{
-  background:rgba(255,255,255,0.03);
+  background:rgba(255,255,255,0.02);
   padding:30px;
   border-radius:14px;
-  border:1px solid rgba(79,156,255,0.1);
+  border:1px solid rgba(79,156,255,0.08);
   position: relative;
   transition: 0.3s;
 }
 
 .price-card.popular {
   border-color: #1f6fff;
-  background: rgba(31, 111, 255, 0.05);
+  background: rgba(31, 111, 255, 0.04);
 }
 
 .popular-badge {
@@ -252,8 +265,8 @@ h2.sec-title {
 
 /* FORM SECTION */
 .form-container {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(79,156,255,0.15);
+  background: rgba(255,255,255,0.01);
+  border: 1px solid rgba(79,156,255,0.1);
   padding: 40px;
   border-radius: 16px;
   max-width: 600px;
@@ -274,8 +287,8 @@ h2.sec-title {
 .form-group input, .form-group select, .form-group textarea {
   width: 100%;
   padding: 12px;
-  background: #0d1527;
-  border: 1px solid rgba(79,156,255,0.2);
+  background: #080d1a;
+  border: 1px solid rgba(79,156,255,0.15);
   border-radius: 8px;
   color: #fff;
   font-size: 15px;
@@ -300,133 +313,120 @@ h2.sec-title {
 }
 .submit-btn:hover { background: #1556cc; }
 
-/* FOOTER */
 footer{
   text-align:center;
   padding:40px;
-  color:#777;
+  color:#555;
   font-size:13px;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255,255,255,0.03);
 }
 </style>
 </head>
-
 <body>
 
 <nav>
-  <h2>HZ Agency</h2>
+  <h2>Pixel Marketing</h2>
   <div>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#work">Proof (Results)</a>
-    <a href="#pricing">Pricing</a>
+    <a href="#services">Capabilities</a>
+    <a href="#campaigns">Ad Results</a>
+    <a href="#ai-videos">AI & Clothes</a>
+    <a href="#pricing">Packages</a>
     <a href="#contact">Apply</a>
   </div>
 </nav>
 
 <div class="hero">
+  <img src="https://i.ibb.co/bRtYwzT0/your-avatar.png" class="hero-img" alt="Hazem Zaki">
   <h1>Hazem <span>Zaki</span></h1>
-  <p>Media Buyer | Digital Marketer | Growth Strategist</p>
-  <div class="badge">Performance Marketing Expert</div>
+  <p>Helping e-commerce brands and local businesses scale up through high-performance media buying, data-driven strategies, and creative video infrastructure.</p>
+  
+  <div class="badge-container">
+    <div class="badge">🚀 Media Buyer</div>
+    <div class="badge">🎬 Content Creation</div>
+    <div class="badge">📊 Media Agency</div>
+    <div class="badge">🔥 Video Editor</div>
+  </div>
 
   <div class="cta">
     <a class="btn primary" href="#contact">Apply to Work</a>
-    <a class="btn green" href="https://wa.me/201099247115" target="_blank">Chat via WhatsApp</a>
+    <a class="btn green" href="https://wa.me/201099247115" target="_blank">WhatsApp Chat</a>
   </div>
 </div>
 
-<section id="about">
-  <h2 class="sec-title">About Me</h2>
-  <div class="about">
-    I help businesses and e-commerce brands scale using data-driven paid campaigns, compelling content, and solid performance marketing systems. My goal is simple: transform your ad spend into scalable revenue and high ROI.
-  </div>
-</section>
-
 <section id="services">
-  <h2 class="sec-title">Core Services</h2>
+  <h2 class="sec-title">Core Expertise</h2>
+  <p class="sec-subtitle">Advanced growth infrastructure tailored for modern client acquisition.</p>
   <div class="grid">
-    <div class="card">🚀 Meta Ads Management (FB & IG)</div>
-    <div class="card">🎬 Reels & Video Content Production</div>
-    <div class="card">📱 Full Social Media Management</div>
-    <div class="card">📊 Tracking & Meta Pixel Setup</div>
+    <div class="card">📈 High-Scale Media Buying</div>
+    <div class="card">🤖 Advanced AI Video Editing</div>
+    <div class="card">🏬 Clothing & Retail Ad Production</div>
+    <div class="card">🎯 Data Analytics & Meta Pixel</div>
   </div>
 </section>
 
-<section id="work">
-  <h2 class="sec-title">Our Proof (Real Results & Ads)</h2>
+<section id="campaigns">
+  <h2 class="sec-title">1. Ad Accounts & Active Campaigns</h2>
+  <p class="sec-subtitle">Real Meta Ads Manager performance, budget spent, and high purchase conversion tracking.</p>
   
-  <p style="color: #b5b5b5; margin-bottom: 20px;">1. Ad Account Performance (Real Data)</p>
   <div class="work-grid">
-    
     <div class="work-card">
-      <img src="image_4.png" class="work-img" alt="Campaign Dashboard">
+      <img src="https://i.ibb.co/S4V365g0/ads-results-1.png" class="work-img" alt="Meta Ads Results">
       <div class="work-info">
-        <h3>E-commerce ROAS Boost</h3>
-        <p>Achieved over 4.5x ROAS by optimizing audiences and creatives in 3 weeks.</p>
+        <h3>E-commerce Conversion & Scale</h3>
+        <p>Live active dashboard tracking purchase value, low cost per result, and scalable budget optimization.</p>
       </div>
     </div>
 
     <div class="work-card">
-      <img src="image_5.png" class="work-img" alt="Meta Ads Manager">
+      <img src="https://i.ibb.co/V0DqXGzY/ads-results-2.png" class="work-img" alt="Campaign Performance">
       <div class="work-info">
-        <h3>Lowering Cost Per Lead</h3>
-        <p>Reduced average CPL by 35% across all campaigns using A/B testing.</p>
+        <h3>High ROI Targeting Systems</h3>
+        <p>A/B testing for massive clothing, interior design, and real estate campaigns to hit maximum ROAS.</p>
       </div>
     </div>
-
-    <div class="work-card">
-      <img src="image_6.png" class="work-img" alt="Campaign Scaling">
-      <div class="work-info">
-        <h3>Scaling & Growth</h3>
-        <p>Successfully scaled monthly ad spend by 200% while keeping ROI positive.</p>
-      </div>
-    </div>
-
   </div>
+</section>
 
-  <p style="color: #b5b5b5; margin-top: 50px; margin-bottom: 20px;">2. Creative Ads Production (High Converting)</p>
+<section id="ai-videos">
+  <h2 class="sec-title">2. Video Production & Fashion Ads</h2>
+  <p class="sec-subtitle">Our creative proof including retail signage design, product catalogs, and cinematic AI clips.</p>
+  
   <div class="work-grid">
-
     <div class="work-card">
-      <img src="image_7.png" class="work-img" alt="Marketing Expert">
+      <img src="https://i.ibb.co/GfHhG1w9/sharwal-brand.png" class="work-img" alt="Sharwal Clothing Brand">
       <div class="work-info">
-        <h3>Content Strategy & Branding</h3>
-        <p>Creative reels and branding for "خد فكرة pixel marketing" expert content.</p>
+        <h3>"Sharwal" Clothing Store Strategy</h3>
+        <p>Full retail production, social media identity design, and structured catalog launch for trousers and items.</p>
       </div>
     </div>
 
     <div class="work-card">
-      <img src="image_8.png" class="work-img" alt="Demolition Ad">
+      <video class="work-video" autoplay loop muted playsinline>
+        <source src="https://vids.kv.net/att-gaming.mp4" type="video/mp4">
+      </video>
       <div class="work-info">
-        <h3>Niche Targeting Ads</h3>
-        <p>Specific lead generation ad for "دمر حمامك القديم" finishing services.</p>
+        <h3>AI Cinematic Theme Production</h3>
+        <p>Advanced AI rendering for gaming spaces and sports concepts used to hook modern viewers instantly.</p>
       </div>
     </div>
 
     <div class="work-card">
-      <img src="image_9.png" class="work-img" alt="Bedroom Ad">
+      <video class="work-video" autoplay loop muted playsinline>
+        <source src="https://vids.kv.net/att-interior.mp4" type="video/mp4">
+      </video>
       <div class="work-info">
-        <h3>Product Conversion Ads</h3>
-        <p>Creating high-converting carousel ads for local e-commerce stores.</p>
+        <h3>AI Architecture & Living Concepts</h3>
+        <p>High-end viral loop videos tailored for luxury finishing, design houses, and furniture e-commerce.</p>
       </div>
     </div>
-
-    <div class="work-card">
-      <img src="image_10.png" class="work-img" alt="Reels Video">
-      <div class="work-info">
-        <h3>Reels Production & Editing</h3>
-        <p>Scripting and producing viral reels that gain mass organic reach.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
 <section id="pricing">
   <h2 class="sec-title">Growth Packages</h2>
+  <p class="sec-subtitle">Choose the level of scaling your business needs right now.</p>
 
   <div class="pricing">
-
     <div class="price-card">
       <h3>Starter Plan</h3>
       <div class="price">2000 EGP</div>
@@ -462,19 +462,18 @@ footer{
       </ul>
       <button class="price-btn" onclick="selectPlan('Pro')">Choose Plan</button>
     </div>
-
   </div>
 </section>
 
 <section id="contact">
-  <h2 class="sec-title" style="text-align: center; border: none;">Apply to Work with Me</h2>
-  <p style="text-align: center; color: #b5b5b5; margin-bottom: 30px;">Fill out this form, and I will get back to you within 24 hours.</p>
+  <h2 class="sec-title" style="text-align: center; border: none;">Apply to Work with Us</h2>
+  <p style="text-align: center; color: #b5b5b5; margin-bottom: 30px;">Fill out the system form below, and we'll contact you within 24 hours.</p>
   
   <div class="form-container">
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <div class="form-group">
         <label>Your Name</label>
-        <input type="text" name="name" placeholder="John Doe" required>
+        <input type="text" name="name" placeholder="Hazem Zaki" required>
       </div>
       
       <div class="form-group">
@@ -484,7 +483,7 @@ footer{
 
       <div class="form-group">
         <label>Business Industry / Niche</label>
-        <input type="text" name="business" placeholder="E-commerce, Real Estate, etc." required>
+        <input type="text" name="business" placeholder="Clothing Brand, E-commerce, etc." required>
       </div>
 
       <div class="form-group">
@@ -502,11 +501,10 @@ footer{
 </section>
 
 <footer>
-© 2026 Hazem Zaki | Portfolio
+© 2026 Hazem Zaki | Pixel Marketing Agency
 </footer>
 
 <script>
-// كود جافاسكريبت ذكي عشان يغير الخطة تلقائياً في الفورم لما العميل يدوس فوق
 function selectPlan(planName) {
   document.getElementById('package-select').value = planName;
   document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
