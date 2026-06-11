@@ -1,1 +1,856 @@
-⁠
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazem Zaki | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0070f3;
+            --primary-hover: #0051b3;
+            --text-main: #111111;
+            --text-muted: #555555;
+            --bg-light: #f8f9fa;
+            --card-border: #eaeaea;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--card-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 80px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .logo-avatar {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary-color), #00a6ff);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 4px 12px rgba(0, 112, 243, 0.2);
+        }
+
+        .logo-info h3 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .logo-info p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-header {
+            background: var(--text-main);
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .btn-header:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 90px 0 60px 0;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #e6f1fe;
+            color: var(--primary-color);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            border: 1px solid rgba(0, 112, 243, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 24px;
+            max-width: 850px;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+            background: linear-gradient(to left, var(--primary-color), #00c6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 720px;
+            margin-bottom: 40px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .btn-main {
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: var(--transition);
+            box-shadow: 0 4px 14px rgba(0, 112, 243, 0.3);
+        }
+
+        .btn-main:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 112, 243, 0.4);
+        }
+
+        .btn-sub {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--card-border);
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+
+        .btn-sub:hover {
+            background: var(--bg-light);
+            transform: translateY(-2px);
+        }
+
+        /* Stats Component */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--card-border);
+            padding-top: 40px;
+            gap: 30px;
+        }
+
+        .stat-box h2 {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--text-main);
+            background: linear-gradient(135deg, var(--text-main), #444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 4px;
+        }
+
+        .stat-box p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin: 0;
+            font-weight: 600;
+        }
+
+        /* Section Layout Utilities */
+        section {
+            padding: 90px 0;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+        }
+
+        .section-header span {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: #e6f1fe;
+            padding: 4px 12px;
+            border-radius: 4px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-top: 12px;
+        }
+
+        /* Methodology Section */
+        .grid-methodology {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .method-card {
+            background: var(--bg-light);
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .method-card:hover {
+            border-color: var(--card-border);
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transform: translateY(-5px);
+        }
+
+        .method-num {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+        }
+
+        .method-card h4 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .method-card p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
+
+        /* Accounts Grid */
+        .grid-accounts {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .account-card {
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+            transition: var(--transition);
+        }
+
+        .account-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+        }
+
+        .account-img-placeholder {
+            width: 100%;
+            height: 190px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Modern Gradients for Placeholders */
+        .bg-gradient-1 { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+        .bg-gradient-2 { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
+        .bg-gradient-3 { background: linear-gradient(135deg, #373b44, #4286f4); }
+
+        .account-body {
+            padding: 24px;
+        }
+
+        .account-tag {
+            font-size: 11px;
+            background: var(--bg-light);
+            color: var(--text-muted);
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .account-body h3 {
+            font-size: 19px;
+            margin: 14px 0 10px 0;
+            font-weight: 700;
+        }
+
+        .account-body p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Case Studies Section */
+        .case-study-block {
+            background: #ffffff;
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+
+        .case-study-block:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        }
+
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            gap: 40px;
+        }
+
+        .case-left h3 {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .case-meta {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .case-meta span {
+            font-size: 12px;
+            background: var(--bg-light);
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 700;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .case-section-title {
+            font-weight: 800;
+            font-size: 15px;
+            color: var(--text-main);
+            margin-top: 20px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .case-left p, .case-left ul {
+            font-size: 14.5px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .case-left ul {
+            padding-right: 24px;
+        }
+        
+        .case-left li {
+            margin-bottom: 8px;
+        }
+
+        .case-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: var(--bg-light);
+            padding: 35px;
+            border-radius: 16px;
+            gap: 25px;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .metric-item {
+            border-bottom: 1px solid #e1e1e1;
+            padding-bottom: 20px;
+        }
+
+        .metric-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .metric-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        /* Skills Box */
+        .skills-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .skill-badge {
+            background: var(--text-main);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 13.5px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .skill-badge:hover {
+            background: var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        /* Footer & CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, var(--text-main), #222);
+            color: #ffffff;
+            padding: 70px 40px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .cta-box h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        .cta-box p {
+            color: #b0b0b0;
+            max-width: 640px;
+            margin: 0 auto 35px auto;
+            font-size: 16.5px;
+            line-height: 1.7;
+        }
+
+        .btn-whatsapp {
+            background: #25d366;
+            color: #ffffff;
+            padding: 16px 36px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            transition: var(--transition);
+            display: inline-block;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background: #20ba5a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Responsiveness Media Queries */
+        @media (max-width: 991px) {
+            .grid-accounts, .case-study-grid { grid-template-columns: 1fr; }
+            .grid-methodology { grid-template-columns: repeat(2, 1fr); }
+            .case-right { gap: 20px; padding: 25px; }
+            .hero h1 { font-size: 38px; }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                padding-bottom: 15px;
+            }
+            nav {
+                width: 100%;
+                justify-content: center;
+                margin: 10px 0;
+            }
+            .btn-header {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid-methodology { grid-template-columns: 1fr; }
+            .hero-stats { grid-template-columns: 1fr; gap: 25px; text-align: center; }
+            .hero h1 { font-size: 30px; }
+            .hero { padding: 50px 0 40px 0; }
+            .case-study-block { padding: 25px; }
+            .case-left h3 { font-size: 20px; }
+            .cta-box h2 { font-size: 26px; }
+            .section-header h2 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation Partition -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-avatar">HZ</div>
+                <div class="logo-info">
+                    <h3>حازم زكي</h3>
+                    <p>Growth Strategist & Media Buyer</p>
+                </div>
+            </a>
+            <nav>
+                <a href="#about">المنهجية</a>
+                <a href="#accounts">المشاريع</a>
+                <a href="#cases">دراسات الحالة</a>
+                <a href="#skills">الأدوات</a>
+            </nav>
+            <a href="https://wa.me/201099247115" class="btn-header" target="_blank">احجز مقابلة استراتيجية</a>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Hero Section Partition -->
+        <section class="hero" style="border-top: none;">
+            <div class="hero-badge">تحليل البيانات وزيادة المبيعات بالأرقام 📊</div>
+            <h1>أبني الأنظمة التسويقية التي تحول الإعلانات إلى <span>عوائد مبيعات وأرباح حقيقية</span></h1>
+            <p>أنا حازم زكي، أخصائي نمو ومشتري مساحات إعلانية (Media Buyer). أركز بالكامل على ربط استراتيجيات الـ Content والـ Funnels بـ Meta Ads لتحقيق أعلى معدل نمو لعملك التجاري.</p>
+            
+            <div class="hero-actions">
+                <a href="#cases" class="btn-main">استعرض النتائج ودراسات الحالة</a>
+                <a href="https://wa.me/201099247115" class="btn-sub" target="_blank">تواصل معي مباشرة</a>
+            </div>
+
+            <!-- Stats Mini Partition -->
+            <div class="hero-stats">
+                <div class="stat-box">
+                    <h2>+15</h2>
+                    <p>مشروع وحملة إعلانية مدارة</p>
+                </div>
+                <div class="stat-box">
+                    <h2>5.2x</h2>
+                    <p>أعلى عائد استثمار إعلاني (ROAS)</p>
+                </div>
+                <div class="stat-box">
+                    <h2>+500K</h2>
+                    <p>ميزانيات مدارة وموزعة بدقة (ج.م)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology Partition -->
+        <section id="about">
+            <div class="section-header">
+                <span>كيف أحقق النتائج؟</span>
+                <h2>منهجية العمل والـ Funnel المتبع</h2>
+            </div>
+            <div class="grid-methodology">
+                <div class="method-card">
+                    <div class="method-num">01</div>
+                    <h4>البحث والتحليل (Research)</h4>
+                    <p>دراسة وفهم طبيعة العميل المستهدف، ومعرفة زوايا المنافسين الإعلانية لتحديد الفجوات الاستراتيجية.</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-num">02</div>
+                    <h4>هيكلة المحتوى (Content Structure)</h4>
+                    <p>صياغة نصوص إعلانية وخطافات بصرية (Hooks) تجذب العميل المناسب بناءً على وعيه بالخدمة.</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-num">03</div>
+                    <h4>حملات الـ Meta (Ads Execution)</h4>
+                    <p>إطلاق الحملات باختبارات دقيقة (AB Testing)، وبناء هياكل مخصصة للتحويل الفوري وإعادة الاستهداف.</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-num">04</div>
+                    <h4>التحسين والتقارير (Scale & Report)</h4>
+                    <p>قراءة الأرقام الأسبوعية وتكلفة الاستحواذ لزيادة ميزانية الإعلان الناجح وإيقاف نزيف الأموال.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accounts Worked With Partition -->
+        <section id="accounts">
+            <div class="section-header">
+                <span>المشاريع الحالية</span>
+                <h2>المجالات التي أدير حملاتها ونموها الرقمي</h2>
+            </div>
+            <div class="grid-accounts">
+                <!-- Box 1 -->
+                <div class="account-card">
+                    <div class="account-img-placeholder bg-gradient-1">
+                        <span style="font-size: 40px; margin-bottom: 10px;">🛒</span>
+                        <span>قطاع الملابس والتجزئة</span>
+                    </div>
+                    <div class="account-body">
+                        <span class="account-tag">E-commerce</span>
+                        <h3>متجر تجزئة للملابس والأحذية</h3>
+                        <p>تطوير نظام مبيعات رقمي يربط إعلانات الكتالوج (Catalog Ads) بحملات الرسائل المباشرة لزيادة المبيعات وتصريف المخزون.</p>
+                    </div>
+                </div>
+                <!-- Box 2 -->
+                <div class="account-card">
+                    <div class="account-img-placeholder bg-gradient-2">
+                        <span style="font-size: 40px; margin-bottom: 10px;">🏗️</span>
+                        <span>الخدمات العقارية والتشطيبات</span>
+                    </div>
+                    <div class="account-body">
+                        <span class="account-tag">High-Ticket Services</span>
+                        <h3>شركة تشطيبات وديكور داخلي</h3>
+                        <p>تأسيس مسار جمع بيانات العملاء (Lead Generation) المستهدفين للخدمات المرتفعة السعر بالمناطق والكمبوندات السكنية الجديدة.</p>
+                    </div>
+                </div>
+                <!-- Box 3 -->
+                <div class="account-card">
+                    <div class="account-img-placeholder bg-gradient-3">
+                        <span style="font-size: 40px; margin-bottom: 10px;">👨‍🏫</span>
+                        <span>التعليم وصناعة المحتوى</span>
+                    </div>
+                    <div class="account-body">
+                        <span class="account-tag">Personal Branding</span>
+                        <h3>مدرس ومقدم كورسات لغة إنجليزية</h3>
+                        <p>بناء براند شخصي رقمي وصناعة مسار تسويقي يعتمد على فيديوهات الـ Reels التعليمية لملء مجموعات التدريس والحجوزات.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Case Studies Partition -->
+        <section id="cases">
+            <div class="section-header">
+                <span>دراسات الحالة بالتحليل والأرقام</span>
+                <h2>تحليل عميق لكيفية تحقيق النتائج</h2>
+            </div>
+
+            <!-- Case 1 -->
+            <div class="case-study-block">
+                <div class="case-study-grid">
+                    <div class="case-left">
+                        <div class="case-meta">
+                            <span>صناعة الملابس</span>
+                            <span>E-commerce & Retail</span>
+                        </div>
+                        <h3>محل الملابس والأحذية: مضاعفة حجم المبيعات الشهرية وتصفية المخزون</h3>
+                        
+                        <div class="case-section-title">⚠️ العقبة والتحدي:</div>
+                        <p>تراكم المخزون في نهاية الموسم، مع ارتفاع تكلفة الرسالة من الإعلانات التقليدية دون تحقيق مبيعات فعلية تغطي التكلفة.</p>
+                        
+                        <div class="case-section-title">💡 الحل والاستراتيجية المتخذة:</div>
+                        <ul>
+                            <li>تطبيق استراتيجية الـ Product Bundling (عروض الحزم المجمعة) لرفع قيمة متوسط الطلب الشرياني (AOV).</li>
+                            <li>تغيير زاوية الإعلان من مجرد عرض السعر إلى "تنسيق كامل للملابس والأحذية" عبر فيديو سريع وجذاب.</li>
+                            <li>تخصيص حملات لإعادة استهداف (Retargeting) مخصصة للعملاء الذين تفاعلوا مسبقاً ولم يشتروا بعد.</li>
+                        </ul>
+                    </div>
+                    <div class="case-right">
+                        <div class="metric-item">
+                            <div class="metric-value">4.8x</div>
+                            <div class="metric-label">متوسط العائد الإعلاني الكلي (ROAS)</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">+240%</div>
+                            <div class="metric-label">زيادة حجم طلبات الشراء أونلاين وبالمحل</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">-35%</div>
+                            <div class="metric-label">انخفاض في تكلفة الرسالة والطلب المؤكد</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="case-study-block">
+                <div class="case-study-grid">
+                    <div class="case-left">
+                        <div class="case-meta">
+                            <span>خدمات المقاولات والديكور</span>
+                            <span>Lead Generation</span>
+                        </div>
+                        <h3>شركة التشطيبات والديكور: استقطاب عملاء جادين للتعاقدات الفاخرة</h3>
+                        
+                        <div class="case-section-title">⚠️ العقبة والتحدي:</div>
+                        <p>الحملات السابقة كانت تجلب أعداداً كبيرة من الرسائل غير الجادة التي تسأل عن سعر المتر بشكل عشوائي دون قدرة مالية حقيقية للتعاقد.</p>
+                        
+                        <div class="case-section-title">💡 الحل والاستراتيجية المتخذة:</div>
+                        <ul>
+                            <li>تصميم استمارات فورية (Instant Forms) تحتوي على أسئلة تصفية دقيقة (تحديد المساحة، نوع الاستلام، والميزانية المتوقعة).</li>
+                            <li>استهداف دقيق جغرافياً مبني على ساكني وملاك العقارات بالكمبوندات والمدن الجديدة قيد الاستلام.</li>
+                            <li>التركيز على محتوى يعكس المصداقية (Trust-Building) عبر استعراض جودة الخامات وفيديوهات لمشاريع تم تسليمها بالفعل.</li>
+                        </ul>
+                    </div>
+                    <div class="case-right">
+                        <div class="metric-item">
+                            <div class="metric-value">180+</div>
+                            <div class="metric-label">عميل محتمل (Lead) مؤهل وعالي الجودة</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">12%</div>
+                            <div class="metric-label">نسبة التحويل من عميل مهتم إلى تعاقد فعلي</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">0% عشوائية</div>
+                            <div class="metric-label">توفير كامل لوقت فريق المبيعات الداخلي</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case 3 -->
+            <div class="case-study-block">
+                <div class="case-study-grid">
+                    <div class="case-left">
+                        <div class="case-meta">
+                            <span>صناعة المحتوى والتعليم</span>
+                            <span>Personal Branding</span>
+                        </div>
+                        <h3>مدرس اللغة الإنجليزية: بناء الجمهور والسيطرة على حجوزات المجموعات</h3>
+                        
+                        <div class="case-section-title">⚠️ العقبة والتحدي:</div>
+                        <p>وجود منافسة شرسة واختفاء صوت البراند الشخصي للمدرس وسط الأسماء الكبيرة الموجودة في السوق.</p>
+                        
+                        <div class="case-section-title">💡 الحل والاستراتيجية المتخذة:</div>
+                        <ul>
+                            <li>تطبيق استراتيجية الـ Video Views Funnel عبر نشر مقاطع ريلز (Reels) قصيرة تقدم قيمة تعليمية فورية لحل عقد الجرامر.</li>
+                            <li>تصميم عرض مغري للطلاب عبارة عن (محاضرة مراجعة تفاعلية كاملة مجانية) للتسجيل والتحويل إلى نظام الواتساب.</li>
+                            <li>إعادة استهداف شاملة لكل من شاهد أكثر من 50% من المحتوى التعليمي لعرض اشتراكات الترم الجديد والمجموعات المكثفة.</li>
+                        </ul>
+                    </div>
+                    <div class="case-right">
+                        <div class="metric-item">
+                            <div class="metric-value">+15,000</div>
+                            <div class="metric-label">طالب ومتابع مهتم جديد للحساب</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">850+</div>
+                            <div class="metric-label">طالب مسجل فعلياً بالمجموعات والكورسات</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-value">4.2 ج.م</div>
+                            <div class="metric-label">تكلفة نقرة العميل المستهدف والتسجيل للواتساب</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Tools Partition -->
+        <section id="skills">
+            <div class="section-header">
+                <span>العتاد التقني والأدوات</span>
+                <h2>الأدوات التي أعتمد عليها لتحليل البيانات وإدارة الحملات</h2>
+            </div>
+            <div class="skills-wrapper">
+                <div class="skill-badge">Meta Ads Manager</div>
+                <div class="skill-badge">Facebook Pixel & Custom Events</div>
+                <div class="skill-badge">Meta Business Suite</div>
+                <div class="skill-badge">Google Analytics (GA4)</div>
+                <div class="skill-badge">Audience Research & Insights</div>
+                <div class="skill-badge">Dynamic Creative Testing (DCT)</div>
+                <div class="skill-badge">AI Marketing & Image tools</div>
+                <div class="skill-badge">Canva & Video Ad Scripting</div>
+                <div class="skill-badge">WhatsApp Automation Funnels</div>
+            </div>
+        </section>
+
+        <!-- Final CTA & Contact Partition -->
+        <section id="contact" style="border-bottom: none; padding-bottom: 40px;">
+            <div class="cta-box">
+                <h2>هل أنت جاهز لتطوير أرقام ومبيعات شركتك؟</h2>
+                <p>دعنا نناقش مشروعك الحالي في مكالمة استراتيجية مدتها 15 دقيقة، نحدد فيها الثغرات التسويقية ونضع خطة واضحة لتحسين نتائج إعلاناتك.</p>
+                <a href="https://wa.me/201099247115" class="btn-whatsapp" target="_blank">تواصل معي عبر واتساب مباشرة 💬</a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
